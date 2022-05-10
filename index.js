@@ -2,6 +2,7 @@
 
 const playersUrl = "https://www.balldontlie.io/api/v1/players";
 const teamsUrl = "https://www.balldontlie.io/api/v1/teams";
+
 const teamsList = document.querySelector("#teams");
 const clickCity = document.querySelector('#click_city');
 const clickName = document.querySelector('#click_name');
@@ -9,18 +10,19 @@ const clickConference = document.querySelector('#click_conference');
 const clickDivision = document.querySelector('#click_division');
 const randomTeamContainer = document.querySelector('#random_team');
 const reviewForm = document.querySelector("#randomize");
-
+const logo = document.querySelector('#logo');
+let players1 = [];
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
     fetch(`${playersUrl}?per_page=100`)
     .then(resp => resp.json())
-    .then(players => console.log(players));
+    .then(players => players1 = players.data);
+
 
     fetch(teamsUrl)
     .then(res => res.json())
     .then(teams => {
-        console.log(teams);
         teams.data.forEach((team) => {
             renderTeam(team);
         })
@@ -35,7 +37,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 clickName.textContent = team.name;
                 clickConference.textContent = team.conference;
                 clickDivision.textContent = team.division;
+                
             })
+            
     
     }
 
@@ -66,28 +70,21 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         button.addEventListener("click", () => {
 
-            const pg = document.createElement('li');
-            randomTeamContainer.append(pg);
-
-            const sg = document.createElement('li');
-            randomTeamContainer.append(sg);
-
-            const sf = document.createElement('li');
-            randomTeamContainer.append(sf);
-
-            const pf = document.createElement('li');
-            randomTeamContainer.append(pf);
-
-            const ce = document.createElement('li');
-            randomTeamContainer.append(ce);
-
-            
+            startingFive(players1);
         })
-
-
-
-
+        
     }
+    
+    
+    const startingFive = players => {
+        for (let i = 0; i < 5; i++) {
+            randomInt = Math.floor(Math.random() * 100);
+            const player = players[randomInt]
 
+            const randomPlayer = document.createElement('li');
+            randomPlayer.innerText = `${player.first_name} ${player.last_name}`
+            randomTeamContainer.append(randomPlayer);
+          }
+    }
 })
 
