@@ -7,6 +7,8 @@ const clickCity = document.querySelector('#click_city');
 const clickName = document.querySelector('#click_name');
 const clickConference = document.querySelector('#click_conference');
 const clickDivision = document.querySelector('#click_division');
+const randomTeamContainer = document.querySelector('#random_team');
+const reviewForm = document.querySelector("#randomize");
 
 
 
@@ -37,10 +39,55 @@ document.addEventListener("DOMContentLoaded", (e) => {
     
     }
 
-    reviewForm.addEventListener("submit", (e) => {
-        e.preventDefault()
-        createLi1.innerText = e.target.review.value
-    })
+    
+    reviewForm.addEventListener("submit", (e) => handleFormSubmit(e));
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        const city = document.createElement('h2');
+        city.innerText = e.target.city_name.value;
+        randomTeamContainer.append(city);
+
+        const name = document.createElement('h1');
+        name.innerText = e.target.team_name.value;
+        randomTeamContainer.append(name);
+
+        const conference = document.createElement('h4');
+        conference.innerText = e.target.conference.value;
+        randomTeamContainer.append(conference);
+
+        const division = document.createElement('h4');
+        division.innerText = e.target.division.value;
+        randomTeamContainer.append(division);
+
+        const button = document.createElement('button');
+        button.innerText = "Choose your starting 5";
+        randomTeamContainer.append(button);
+
+        button.addEventListener("click", () => {
+
+            const pg = document.createElement('li');
+            randomTeamContainer.append(pg);
+
+            const sg = document.createElement('li');
+            randomTeamContainer.append(sg);
+
+            const sf = document.createElement('li');
+            randomTeamContainer.append(sf);
+
+            const pf = document.createElement('li');
+            randomTeamContainer.append(pf);
+
+            const ce = document.createElement('li');
+            randomTeamContainer.append(ce);
+
+            
+        })
+
+
+
+
+    }
 
 })
 
