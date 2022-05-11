@@ -1,0 +1,32 @@
+img {
+    max-width:30%
+}
+
+h1 {
+    float: right;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 75px
+}
+
+#click {
+    color: white;
+    font-family: "Helvetica";
+    font-weight: bold;
+}
+
+#teams {
+    /* text-align: center;
+    display: table;
+    padding-left: 0px; */
+    column-count: 6;
+    column-width: 30px
+}
+
+body {
+    background-color: #26428b;
+    /* background-image: url("./src/dirk.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+

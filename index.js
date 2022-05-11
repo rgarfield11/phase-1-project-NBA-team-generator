@@ -10,9 +10,8 @@ const clickConference = document.querySelector('#click_conference');
 const clickDivision = document.querySelector('#click_division');
 const randomTeamContainer = document.querySelector('#random_team');
 const reviewForm = document.querySelector("#randomize");
-const logo = document.querySelector('#logo');
+const nbaLogo = document.querySelector("#nbaLogo")
 let players1 = [];
-
 
 document.addEventListener("DOMContentLoaded", (e) => {
     fetch(`${playersUrl}?per_page=100`)
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
     const renderTeam = team => {
-            const li = document.createElement("li");
+            const li = document.createElement("td");
             li.textContent = team.abbreviation;
             teamsList.append(li); 
             li.addEventListener("click", () => {
@@ -42,6 +41,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
             
     
     }
+
+    nbaLogo.addEventListener('click', () => {
+        const newAudioElement = document.createElement('audio')
+        newAudioElement.src = "./src/NBA_on_TNT.mp3#t=00:00:32"
+        newAudioElement.play()
+    })
 
     
     reviewForm.addEventListener("submit", (e) => handleFormSubmit(e));
