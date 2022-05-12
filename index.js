@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
     const renderTeam = team => {
-            const li = document.createElement("td");
+            const li = document.createElement("li");
             li.textContent = team.abbreviation;
             teamsList.append(li); 
             li.addEventListener("click", () => {
@@ -38,9 +38,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 clickDivision.textContent = team.division;
                 
             })
-            // if (team.id % 6 === 0) {  
-
-            // }
     
     }
 
