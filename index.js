@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 clickDivision.textContent = team.division;
                 
             })
-            if (team.id % 6 === 0) {  
+            // if (team.id % 6 === 0) {  
 
-            }
+            // }
     
     }
 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         name.innerText = e.target.team_name.value;
         randomTeamContainer.append(name);
 
-        const conference = document.createElement('h4');
+        const conference = document.createElement('h5');
         conference.innerText = e.target.conference.value;
         randomTeamContainer.append(conference);
 

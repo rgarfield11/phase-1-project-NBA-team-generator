@@ -14,11 +14,13 @@ h1 {
     color: white;
     font-family: "Helvetica";
     font-weight: bold;
+    position: relative;
 }
 
 #teams {
     column-count: 6;
-    column-width: 30px
+    column-width: 30px;
+    position: relative;
 }
 
 body {
