@@ -26,28 +26,39 @@
         <ul id="random_team"></ul>
     
     
-    
-    <form id="randomize">
-        <label for="city_name">City Name</label>
-        <textarea id="city_name"></textarea>
-        <label for="team_name">Team Name</label>
-        <textarea id="team_name"></textarea>
-        <label for="conference">Conference</label>
-        <select id="conference">
+    <div id="rand">
+     <form id="randomize">
+        <div id="formCity">
+            <label for="city_name">City Name</label>
+            <textarea id="city_name"></textarea>
+        </div>
+        <div id="formName">
+            <label for="team_name">Team Name</label>
+            <textarea id="team_name"></textarea>
+        </div>
+        <div id="formConference">
+            <label for="conference">Conference </label>
+            <select id="conference">
             <option>East</option>
             <option>West</option>
+        </div>
+        <div id="formDivision">
         </select>
-        <label for="division">Division</label>
-        <select id="division">
-            <option>Atlantic</option>
-            <option>Central</option>
-            <option>South East</option>
-            <option>North West</option>
-            <option>Pacific</option>
-            <option>South West</option>
-        </select>
-        <button type="submit">Create Team</button>
-    </form>
+        <label for="division">Division </label>
+            <select id="division">
+                <option>Atlantic</option>
+                <option>Central</option>
+                <option>South East</option>
+                <option>North West</option>
+                <option>Pacific</option>
+                <option>South West</option>
+            </select>
+        </div>
+        <div id="formSubmit">
+            <button type="submit">Create Team</button>
+        </div>
+     </form>
+    </div>
     
 </body>
 </html>

@@ -13,6 +13,7 @@ h1 {
     color: white;
     font-family: "Helvetica";
     font-weight: bold;
+    position: relative;
 }
 
 #teams {
@@ -20,7 +21,8 @@ h1 {
     display: table;
     padding-left: 0px; */
     column-count: 6;
-    column-width: 30px
+    column-width: 30px;
+    position: relative;
 }
 
 body {
@@ -30,3 +32,56 @@ body {
     background-size: cover; */
 }
 
+#rand {
+    position: absolute;
+    background-color: red;
+    display: flex;
+    margin: 10px;
+    width: 800px;
+    height: 120px;
+    flex: center;
+}
+
+#randomize {
+    position: relative;
+    font-family: "Helvetica";
+    display: flex;
+    flex: center;
+    height: 100px;
+    width: 50px;
+    display: block;
+}
+#formCity {
+    position: relative;
+    display: flex;
+    max-height: 40px;
+    margin: 10px;
+    width: 180px;
+}
+#formSubmit {
+    position: relative;
+    display: flex;
+    max-height: 40px;
+    max-width: 100px;
+    margin: 10px;
+}
+
+#formName {
+    position: relative;
+    display: flex;
+    max-height: 40px;
+    margin: 10px;
+    width: 200px;
+}
+#formConference {
+    position: relative;
+    display: flex;
+    max-height: 40px;
+    margin: 10px;
+}
+#formDivision {
+    position: relative;
+    display: flex;
+    max-height: 40px;
+    margin: 10px;
+}

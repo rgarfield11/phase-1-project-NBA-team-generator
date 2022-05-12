@@ -53,19 +53,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
-        const city = document.createElement('h2');
+        const city = document.createElement('h3');
         city.innerText = e.target.city_name.value;
         randomTeamContainer.append(city);
 
-        const name = document.createElement('h1');
+        const name = document.createElement('h2');
         name.innerText = e.target.team_name.value;
         randomTeamContainer.append(name);
 
-        const conference = document.createElement('h4');
+        const conference = document.createElement('h5');
         conference.innerText = e.target.conference.value;
         randomTeamContainer.append(conference);
 
-        const division = document.createElement('h4');
+        const division = document.createElement('h5');
         division.innerText = e.target.division.value;
         randomTeamContainer.append(division);
 
