@@ -23,31 +23,37 @@
     </div>
 
     <div>
-        <ul id="random_team"></ul>
+        <ul style="list-style: none;" id="random_team"></ul>
     
     
-    
-    <form id="randomize">
-        <label for="city_name">City Name</label>
-        <textarea id="city_name"></textarea>
-        <label for="team_name">Team Name</label>
-        <textarea id="team_name"></textarea>
-        <label for="conference">Conference</label>
-        <select id="conference">
-            <option>East</option>
-            <option>West</option>
-        </select>
-        <label for="division">Division</label>
-        <select id="division">
-            <option>Atlantic</option>
-            <option>Central</option>
-            <option>South East</option>
-            <option>North West</option>
-            <option>Pacific</option>
-            <option>South West</option>
-        </select>
-        <button type="submit">Create Team</button>
-    </form>
+    <div id="rand">
+        <form id="randomize">
+            <h2 class="formHeader">Create Your Team!</h2>
+            <label class="city" for="city_name">City Name</label>
+            <textarea class="city" id="city_name"></textarea>
+            <br>
+            <label class="name" for="team_name">Team Name</label>
+            <textarea class="name" id="team_name"></textarea>
+            <br>
+            <label class="conference" for="conference">Conference</label>
+            <select class="conference" id="conference">
+                <option>East</option>
+                <option>West</option>
+            </select>
+            <br>
+            <label class="division" for="division">Division</label>
+            <select class="division" id="division">
+                <option>Atlantic</option>
+                <option>Central</option>
+                <option>South East</option>
+                <option>North West</option>
+                <option>Pacific</option>
+                <option>South West</option>
+            </select>
+            <br>
+            <button class="createTeam" id="createTeam" type="submit">Create Team</button>
+        </form>
+    </div>
     
 </body>
 </html>
