@@ -39,6 +39,7 @@ body {
     margin: 10px;
     display: block;
     border-radius: 5%;
+    box-shadow: 3px 5px 5px rgb(104, 0, 0);;
     
 }
 
@@ -46,7 +47,8 @@ body {
     position:absolute;
     margin-left: 100px;
     margin-top: 40px;
-    
+    background-color:#26428b;
+    color: white;
 }
 
 #random_team {
@@ -57,8 +59,7 @@ body {
     color:#C8102E;
     background-color: white;
     max-width: 200px;
-    
-
+    box-shadow: 3px 5px 5px rgb(104, 0, 0);;
 }
 
 .formHeader {
@@ -71,32 +72,46 @@ body {
 .city {
     margin-left: 18px;
     margin-top: 20px;
+    
 }
 
 .name {
     margin-left: 11px;
     margin-top: 30px;
+    
 }
 
 .conference {
     margin-left: 40px;
     margin-top: 40px;
+    
 }
 
 .division {
     margin-left: 40px;
     margin-top: 40px;
+    
 }
 
 
 ul {
-    width: 100%;
-}
-
-li {
-    padding: 10px;
+    width: 98%;
 }
 
 ul#teams li {
     cursor: pointer;
+    padding: 30px;
+    background-color: #C8102E;
+    border-radius: 5%;
+    transform: scale(0.7);
+    font-size: 30px;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(104, 0, 0);
 }
+
+ul#random_team li {
+    color: #26428b;
+    font-size: large;
+    font-style: italic;
+}
+

@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 clickName.textContent = team.name;
                 clickConference.textContent = team.conference;
                 clickDivision.textContent = team.division;
-                
             })
     
     }
@@ -73,9 +72,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
         randomTeamContainer.append(button);
 
         button.addEventListener("click", () => {
-
+            
             startingFive(players1);
+            button.remove();
         })
+
+        reviewForm.remove();
         
     }
     
